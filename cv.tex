@@ -1,0 +1,153 @@
+\documentclass[a4paper,portrait,margin=0.5in]{article}
+
+\usepackage{makecell}
+\usepackage{booktabs}
+
+\usepackage{tabularx}
+\usepackage{charter}
+\usepackage[inkscapelatex=false]{svg}
+\usepackage{graphicx} % Required for including images
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=red]{hyperref}
+\usepackage{fancyhdr} % Required for customizing headers and footers
+\usepackage[
+	a4paper, % Paper size
+	top=0.7in, % Top margin
+	bottom=1in, % Bottom margin
+	left=1in, % Left margin
+	right=1in, % Right margin
+	%showframe % Uncomment to show frames around the margins for debugging purposes
+]{geometry}
+
+\setlength{\parindent}{0pt} % Paragraph indentation
+\setlength{\parskip}{1em} % Vertical space between paragraphs
+
+\fancypagestyle{firstpage}{%
+	\fancyhf{} % Clear default headers/footers
+	\renewcommand{\headrulewidth}{0pt} % No header rule
+	\renewcommand{\footrulewidth}{1pt} % Footer rule thickness
+}
+
+\fancypagestyle{subsequentpages}{%
+	\fancyhf{} % Clear default headers/footers
+	\renewcommand{\headrulewidth}{1pt} % Header rule thickness
+	\renewcommand{\footrulewidth}{1pt} % Footer rule thickness
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}p{0.8\textwidth}}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}p{0.15\textwidth}}
+
+\AtBeginDocument{\thispagestyle{firstpage}} % Use the first page headers/footers style on the first page
+\pagestyle{subsequentpages} % Use the subsequent pages headers/footers style on subsequent pages
+
+%----------------------------------------------------------------------------------------
+\begin{document}
+%----------------------------------------------------------------------------------------
+%	FIRST PAGE HEADER
+%----------------------------------------------------------------------------------------
+\begin{minipage}{0.5\textwidth}
+    \begin{flushleft}
+        \textbf{GUELFEN Abdelheq} \\
+        \textbf{E-mail:} abdelheq.guelfen@usthb.dz \\
+        \textbf{Phone:} +213696463735 \\
+        \textbf{Website:} \url{https://hakoudev.web.app} \\
+        \textbf{Repository:} \url{https://gitlab.com/hakouguelfen} \\
+    \end{flushleft}
+\end{minipage}
+
+\rule{\linewidth}{1pt} % Horizontal rule
+
+%----------------------------------------------------------------------------------------
+%	Experiences
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{\linewidth}
+  Experience
+\end{minipage}
+
+% Job 1
+\textbf{Hnuut Express [\url{https://hanuut.com}]}\\
+\begin{tabularx}{\textwidth}{@{}L R@{}}
+  \toprule
+  \textbf{Co-Founder and Lead Developer} & 2022 -- 2024\\\\
+
+  \begin{minipage}[t]{\linewidth}
+    \begin{itemize}
+      \item Co-founded a small e-commerce startup, developing a platform for shops to sell products online
+      \item Created a basic delivery system to support the platform's operations
+      \item Gained valuable experience in team dynamics and meeting project deadlines
+      \item Improved technical skills while working in a fast-paced startup environment
+    \end{itemize}
+  \end{minipage} \\\\
+\end{tabularx}
+
+
+% Job 1
+\textbf{Self-Directed Learning in Software Development}\\
+\begin{tabularx}{\textwidth}{@{}L R@{}}
+  \toprule
+  \textbf{Learning} & 2020 -- 2022\\\\
+
+  \begin{minipage}[t]{\linewidth}
+    \begin{itemize}
+      \item Embarked on an intensive two-year self-learning journey to gain comprehensive skills in software development
+      \item Mastered key areas including:
+            \begin{itemize}
+              \item Frontend and backend development
+              \item Database management and API design
+              \item Software development best practices
+              \item Linux operating system and basic networking
+              \item Data structures and algorithms
+            \end{itemize}
+      \item Developed practical projects to apply and reinforce learned concepts
+      \item Cultivated a robust foundation for a career in full-stack development
+    \end{itemize}
+  \end{minipage}
+\end{tabularx}\\
+
+%----------------------------------------------------------------------------------------
+%	Educations
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{\linewidth}
+  Education
+\end{minipage}
+
+\begin{tabularx}{\textwidth}{@{}L R@{}}
+  \toprule
+  \begin{minipage}[t]{\linewidth}
+    \textbf{Master's Degree in Bio-informatics}\\
+    University of Science and Technology Houari Boumediene (USTHB) \\
+    Currently pursuing \\
+  \end{minipage} & 2023 -- Present \\
+
+  \midrule
+
+  \begin{minipage}[t]{\linewidth}
+    \textbf{Bachelor's Degree (Licence) in Computer Systems (SI)}\\
+    University of Batna 2 \\
+    Specialization: System Informatique (SI) \\
+  \end{minipage} & 2019 -- 2022 \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	Technical skills
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{\linewidth}
+  Technical skills
+\end{minipage}
+
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+  \toprule
+  \textbf{Category} & \textbf{Skills} \\
+  \midrule
+  Operating Systems & Linux \\
+  Version Control & Git \\
+  Databases & MongoDB \\
+  Programming Languages & TypeScript, Python, Rust (learning) \\
+  Containerization & Docker (learning) \\
+  Frameworks & Svelte, Flutter, Nestjs, Actix (learning) \\
+  Cloud Platforms & Firebase \\
+\end{tabularx}
+
+\end{document}
