@@ -13,8 +13,8 @@
 	a4paper, % Paper size
 	top=0.7in, % Top margin
 	bottom=1in, % Bottom margin
-	left=1in, % Left margin
-	right=1in, % Right margin
+	left=0.5in, % Left margin
+	right=0.5in, % Right margin
 	%showframe % Uncomment to show frames around the margins for debugging purposes
 ]{geometry}
 
@@ -35,6 +35,7 @@
 
 \newcolumntype{L}{>{\raggedright\arraybackslash}p{0.8\textwidth}}
 \newcolumntype{R}{>{\raggedleft\arraybackslash}p{0.15\textwidth}}
+\newcommand{\lighttext}[1]{\textcolor{gray!200}{#1}}
 
 \AtBeginDocument{\thispagestyle{firstpage}} % Use the first page headers/footers style on the first page
 \pagestyle{subsequentpages} % Use the subsequent pages headers/footers style on subsequent pages
@@ -44,13 +45,14 @@
 %----------------------------------------------------------------------------------------
 %	FIRST PAGE HEADER
 %----------------------------------------------------------------------------------------
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}{1\textwidth}
     \begin{flushleft}
         \textbf{GUELFEN Abdelheq} \\
-        \textbf{E-mail:} abdelheq.guelfen@usthb.dz \\
+        \textbf{E-mail:} abdelheq.guelfen@etu.usthb.dz \\
         \textbf{Phone:} +213696463735 \\
         \textbf{Website:} \url{https://hakoudev.web.app} \\
         \textbf{Repository:} \url{https://gitlab.com/hakouguelfen} \\
+        \textbf{Linkedin:} \url{https://linkedin.com/in/abdelheq-guelfen} \\
     \end{flushleft}
 \end{minipage}
 
@@ -61,14 +63,14 @@
 %----------------------------------------------------------------------------------------
 
 \begin{minipage}[t]{\linewidth}
-  Experience
+  \textbf{Experience}
 \end{minipage}
 
 % Job 1
-\textbf{Hnuut Express [\url{https://hanuut.com}]}\\
 \begin{tabularx}{\textwidth}{@{}L R@{}}
   \toprule
-  \textbf{Co-Founder and Lead Developer} & 2022 -- 2024\\\\
+  \textbf{Hanuut Express [\url{https://hanuut.com}]}\\
+  \lighttext{Co-Founder and Lead Developer} & 2022 -- 2024\\\\
 
   \begin{minipage}[t]{\linewidth}
     \begin{itemize}
@@ -77,15 +79,13 @@
       \item Gained valuable experience in team dynamics and meeting project deadlines
       \item Improved technical skills while working in a fast-paced startup environment
     \end{itemize}
-  \end{minipage} \\\\
+  \end{minipage}\\\\
 \end{tabularx}
-
 
 % Job 1
 \textbf{Self-Directed Learning in Software Development}\\
 \begin{tabularx}{\textwidth}{@{}L R@{}}
-  \toprule
-  \textbf{Learning} & 2020 -- 2022\\\\
+  \lighttext{Learning} & 2020 -- 2022\\\\
 
   \begin{minipage}[t]{\linewidth}
     \begin{itemize}
@@ -109,7 +109,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{minipage}[t]{\linewidth}
-  Education
+  \textbf{Education}
 \end{minipage}
 
 \begin{tabularx}{\textwidth}{@{}L R@{}}
@@ -120,13 +120,11 @@
     Currently pursuing \\
   \end{minipage} & 2023 -- Present \\
 
-  \midrule
-
   \begin{minipage}[t]{\linewidth}
     \textbf{Bachelor's Degree (Licence) in Computer Systems (SI)}\\
     University of Batna 2 \\
     Specialization: System Informatique (SI) \\
-  \end{minipage} & 2019 -- 2022 \\
+  \end{minipage} & 2020 -- 2023 \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -134,7 +132,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{minipage}[t]{\linewidth}
-  Technical skills
+  \textbf{Technical skills}
 \end{minipage}
 
 \begin{tabularx}{\textwidth}{@{}l X@{}}
