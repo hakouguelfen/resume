@@ -12,7 +12,7 @@
 \usepackage{fancyhdr} % Required for customizing headers and footers
 \usepackage[
 	a4paper, % Paper size
-	top=0.4in, % Top margin
+	top=0.5in, % Top margin
 	bottom=1in, % Bottom margin
 	left=0.5in, % Left margin
 	right=0.5in, % Right margin
@@ -111,10 +111,34 @@
     \end{itemize}
   \end{minipage}\\\\
 \end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	Projects
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{\linewidth}
+  \textbf{Projets}
+\end{minipage}
+
+\begin{tabularx}{\textwidth}{@{}L R@{}}
+  \toprule
+
+  \textbf{Anzar Authentication Service [\url{https://anzar_software.gitlab.io/python-sdk/}]}\\
+  \lighttext{Projet Open Source} & 2024 -- Présent\\[0.2cm]
+
+  \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+      \item Architecturé un microservice d'authentification prêt pour la production en Rust, implémentant des stratégies doubles JWT/Session et le support MongoDB/SQLite.
+      \item Conçu une couche de sécurité complète prévenant les attaques CSRF, XSS, injection SQL et DoS grâce à la limitation de débit, l'exécution en temps constant et les cookies de dispositif.
+      \item Développé des SDK pour Python/Ts, conteneurisé le service en image Docker pour simplifier son utilisation, et créé de la documentation pour faciliter l'intégration dans les applications existantes.
+    \end{itemize}
+  \end{minipage}\\\\
+\end{tabularx}
+
+\newpage
 %----------------------------------------------------------------------------------------
 %	Educations
 %----------------------------------------------------------------------------------------
-
 \begin{minipage}[t]{\linewidth}
   \textbf{Formation}
 \end{minipage}
