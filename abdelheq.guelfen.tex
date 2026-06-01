@@ -1,14 +1,21 @@
 \documentclass[a4paper,portrait]{article}
 
+
+% \usepackage{tabularray}
+% \UseTblrLibrary{booktabs}
+
 \usepackage{makecell}
 \usepackage{booktabs}
-
-\usepackage{enumitem} % Add this to your preamble
 \usepackage{tabularx}
-\usepackage{charter}
+
+\usepackage{enumitem}
+\usepackage{fontspec}
+\setmainfont{XCharter}
+
+
 \usepackage[inkscapelatex=false]{svg}
 \usepackage{graphicx} % Required for including images
-\usepackage[colorlinks=true, urlcolor=blue, linkcolor=red]{hyperref}
+\usepackage[colorlinks=true, urlcolor=teal, linkcolor=red]{hyperref}
 \usepackage{fancyhdr} % Required for customizing headers and footers
 \usepackage[
 	a4paper, % Paper size
@@ -36,7 +43,7 @@
 
 \newcolumntype{L}{>{\raggedright\arraybackslash}p{0.8\textwidth}}
 \newcolumntype{R}{>{\raggedleft\arraybackslash}p{0.15\textwidth}}
-\newcommand{\lighttext}[1]{\textcolor{gray!200}{#1}}
+\newcommand{\lighttext}[1]{\textcolor{gray}{#1}}
 
 \AtBeginDocument{\thispagestyle{firstpage}} % Use the first page headers/footers style on the first page
 \pagestyle{subsequentpages} % Use the subsequent pages headers/footers style on subsequent pages
@@ -68,35 +75,10 @@
 \end{minipage}
 
 % Job 1
+%----------------------------------------------------------------------------------------
 \begin{tabularx}{\textwidth}{@{}L R@{}}
   \toprule
 
-  \textbf{Hanuut Express [\url{https://hanuut.com}]}\\
-  \lighttext{Co-Founder and Lead Developer} & 2022 -- 2024\\[0.2cm]
-
-  \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
-      \item Co-founded a startup and led technical development of an e-commerce platform enabling local shops to establish online presence and sell products digitally.
-      \item Developed a cross-platform mobile application using Flutter for customer and shop management.
-      \item Built backend API with NestJS and MongoDB, implementing JWT authentication/authorization and database operations for the platform.
-      \item Built a real-time delivery system using Flutter with Google Maps integration, WebSocket connections for live route updates, and Firebase push notifications to alert nearby drivers of new orders.
-      \item Gained valuable experience in team dynamics and meeting project deadlines.
-    \end{itemize}
-  \end{minipage}\\\\
-\end{tabularx}
-
-
-%----------------------------------------------------------------------------------------
-%	Internships
-%----------------------------------------------------------------------------------------
-
-\begin{minipage}[t]{\linewidth}
-  \textbf{Internships}
-\end{minipage}
-
-% Job 1
-\begin{tabularx}{\textwidth}{@{}L R@{}}
-  \toprule
   \textbf{GlaxoSmithKline(GSK)}\\
   \lighttext{Master's Thesis - Analyzing Deviations in Quality Control at GlaxoSmithKline (GSK)} & Fev -- Jul 2025\\[0.2cm]
 
@@ -117,6 +99,27 @@
     \end{itemize}
   \end{minipage}\\\\
 \end{tabularx}
+
+% Job 2
+%----------------------------------------------------------------------------------------
+\begin{tabularx}{\textwidth}{@{}L R@{}}
+  \textbf{Hanuut Express [\url{https://hanuut.com}]}\\
+  \lighttext{Co-Founder and Lead Developer} & 2022 -- 2024\\[0.2cm]
+
+  \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+      \item Co-founded a startup and led technical development of an e-commerce platform enabling local shops to establish online presence and sell products digitally.
+      \item Developed a cross-platform mobile application using Flutter for customer and shop management.
+      \item Built backend API with NestJS and MongoDB, implementing JWT authentication/authorization and database operations for the platform.
+      \item Built a real-time delivery system using Flutter with Google Maps integration, WebSocket connections for live route updates, and Firebase push notifications to alert nearby drivers of new orders.
+      \item Gained valuable experience in team dynamics and meeting project deadlines.
+    \end{itemize}
+  \end{minipage}\\\\
+\end{tabularx}
+
+
+
+
 %----------------------------------------------------------------------------------------
 %	Projects
 %----------------------------------------------------------------------------------------
@@ -128,19 +131,20 @@
 \begin{tabularx}{\textwidth}{@{}L R@{}}
   \toprule
 
-  \textbf{Anzar Authentication Service [\href{https://anzar_software.gitlab.io/docs/}{Documentation}]}\\
-
-  % \textbf{Anzar Authentication Service [\url{https://anzar_software.gitlab.io/python-sdk/}]}\\
+  \textbf{Anzar Authentication Service [\url{https://anzar_software.gitlab.io/docs/}]}\\
 
   \lighttext{Open Source Project} & 2024 -- Present\\[0.2cm]
 
   \begin{minipage}[t]{\linewidth}
     \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
-      \item Architected a production-ready authentication microservice in Rust, implementing dual JWT/Session strategies and MongoDB/SQLite support.
+      \item Architected a production-ready authentication microservice in Rust, implementing dual JWT/Session strategies and MongoDB/Postgres support with (RBAC) authorization system.
 
       \item Engineered a comprehensive security layer preventing CSRF, XSS, SQL injection, and DoS attacks through rate limiting, constant-time execution, and device cookies.
 
       \item Developed SDKs for Python/Ts, containerized the service as Docker image to simplify its usage, and created documentation to facilitate integration into existing applications.
+
+      \item Built a cross-platform CLI (distributed via npm, cargo, and shell installers) to scaffold configuration, generate and run database migrations, rotate signing keys, and validate service health.
+
 
     \end{itemize}
   \end{minipage}\\\\
@@ -171,23 +175,22 @@
 %----------------------------------------------------------------------------------------
 %	Technical skills
 %----------------------------------------------------------------------------------------
-
-\begin{minipage}[t]{\linewidth}
-  \textbf{Technical skills}
-\end{minipage}
-
-\begin{tabularx}{\textwidth}{@{}l X@{}}
-  \toprule
-  \textbf{Category} & \textbf{Skills} \\
-  \midrule
-  Operating Systems & Linux \\
-  Version Control & Git \\
-  Databases & MongoDB \\
-  Programming Languages & TypeScript, Python, Rust (learning) \\
-  Containerization & Docker (learning) \\
-  Frameworks & Svelte, Flutter, Nestjs, Actix (learning) \\
-  Cloud Platforms & Firebase \\
-  Machine Learning & Sckit-learn, TensorFlow (learning) \\
-\end{tabularx}
+% \begin{minipage}[t]{\linewidth}
+%   \textbf{Technical skills}
+% \end{minipage}
+%
+% \begin{tabularx}{\textwidth}{@{}l X@{}}
+%   \toprule
+%   \textbf{Category} & \textbf{Skills} \\
+%   \midrule
+%   Operating Systems & Linux \\
+%   Version Control & Git \\
+%   Databases & MongoDB \\
+%   Programming Languages & TypeScript, Python, Rust (learning) \\
+%   Containerization & Docker (learning) \\
+%   Frameworks & Svelte, Flutter, Nestjs, Actix (learning) \\
+%   Cloud Platforms & Firebase \\
+%   Machine Learning & Sckit-learn, TensorFlow (learning) \\
+% \end{tabularx}
 
 \end{document}
